@@ -1,0 +1,33 @@
+{% load static %}
+<html>
+    <head>
+        <title>Teraz</title>
+        <link rel="stylesheet" href='{% static "styles.css" %}'>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    </head>
+    <body>
+        <div id='content'>
+            <div id='info'>
+                <p>JESTEŚ</p>
+                <p>POSIADASZ DOSTĘP DO INFORMACJI</p>
+                <p>STRONA ZOSTAŁA WYGENEROWANA TYLKO DLA CIEBIE</p>
+                <p>JESTEŚ AKTUALNIE JEDYNĄ OSOBĄ KTORA MOŻE TEGO DOŚWIADCZYĆ</p>
+                <p>OTWÓRZ *PRZED</p>
+            </div>
+            <div id='buts'>
+            <div id='przed'>
+                <a href='{%url "teraz:przed" %}' id='bprzed' class="btn btn-warning bw">OTWÓRZ</a><span class='bInfo' id='bprz'>PRZED</span>
+            </div>
+            <div id='teraz'>
+                <a href='{% url "teraz:teraz" %}' id='bteraz' class="btn btn-warning bw">OTWÓRZ</a><span class='bInfo' id='bt'>TERAZ</span>
+            </div>
+            <div id='po'>
+                <a href='{% url "teraz:po" %}' id='bpo' class="btn btn-warning bw">OTWÓRZ</a><span class='bInfo' id='bp'>PO</span>
+            </div>           
+        </div>
+        </div>
+    </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src='{% static "javascript.js" %}'></script>
+</html>

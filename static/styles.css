@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata&display=swap');
+
+body{
+    background-color: black !important;
+    color: #BABABA !important;
+    font-size: 300% !important;
+    margin-left: 10% !important;
+    font-family: 'Inconsolata', monospace !important;
+}
+#info{
+    position: absolute;
+    top: 20%;
+}
+#buts{
+    position: absolute;
+    top: 55%;
+    width: 20%;
+}
+#bprz, #bt, #bp{
+    position: relative;
+    margin-left: 3%;
+}
+.bw{
+    width: 20% !important;
+    background-color: black !important;
+    maArgin-bottom: 3% !important;
+    border-color: white !important;
+    color: #BABABA !important;
+    font-size: 60% !important;
+    font-family: 'Inconsolata', monospace !important;
+}
+#przed, #teraz, #po{
+    margin-bottom: 3% !important;
+}
+
+#log{
+    position: absolute;
+    top: 40%;
+    left: 41.5%;
+}
+.lw{
+    margin-top: 3% !important;
+    position: relative;
+    width: 100%;
+    font-size: 60% !important;
+    font-weight: bold !important;
+    background-color: black !important;
+    border-color: white !important;
+}
+
+::-webkit-input-placeholder {
+    text-align: center;
+}
+#formularz{
+    position: absolute !important;
+    top: 40% !important;
+}
+input{
+    height: 1.15em !important;
+    margin-top: 0.5% !important;
+    color: black;
+    border-radius: 4px;
+    border-color: white !important;
+}
+.sw{
+    margin-top: 3% !important;
+    position: relative;
+    width: 100%;
+    font-size: 60% !important;
+    font-weight: bold !important;
+    background-color: black !important;
+    border-color: white !important;
+    width: 81.5%;
+}
+#info1{
+    position: absolute;
+    top: 10%;
+}
+#reason{
+    height: 3em !important;
+}

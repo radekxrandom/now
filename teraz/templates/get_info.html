@@ -1,0 +1,36 @@
+{% load static %}
+<html>
+    <head>
+        <title>Teraz</title>
+        <link rel="stylesheet" href='{% static "styles.css" %}'>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    </head>
+    <body>
+        <div id='content'>
+            <div id='info1'>
+                <p>JESTEŚ</p>
+                <p>POSIADASZ DOSTĘP DO INFORMACJI</p>
+                <p>STRONA ZOSTAŁA WYGENEROWANA TYLKO DLA CIEBIE</p>
+                <p>JESTEŚ AKTUALNIE JEDYNĄ OSOBĄ KTORA MOŻE TEGO DOŚWIADCZYĆ</p>
+                <p>OTWÓRZ *PRZED</p>
+            </div>
+            <div id='formularz'>
+                        <p>POPROS O KOD DOSTEPU</p>
+                        <form method='post'>
+                            {% csrf_token %}
+                            <input type='text' id='name' placeholder="NAME" name='name' />
+                            <br>
+                            <input type='text' id='mail' name='mail' placeholder='E-MAIL' />
+                            <br>
+                            <input type='textarea' id='reason' placeholder="TEXT..." name='reason'/>
+                            <button type='submit' value='post' class="btn btn-warning sw">SEND</button>
+            
+                        </form>
+        </div>
+        </div>
+        
+    </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src='{% static "javascript.js" %}'></script>
+</html>
