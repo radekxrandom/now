@@ -89,3 +89,18 @@ input{
     }
 
 }
+#content0{
+  position: absolute;
+  top: 3rem !important;
+}
+#info2{
+  position: relative;
+}
+#go_back{
+  position: relative;
+  width: 80rem;
+  margin-bottom: 20rem !important;
+}
+.bw:hover{
+  filter: blur(0.4px);
+}

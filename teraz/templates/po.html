@@ -2,11 +2,22 @@
 <html>
     <head>
         <title>Teraz</title>
-        <link rel="stylesheet" href='{%static "styles.css" %}'>
+        <link rel="stylesheet" href='{% static "styles.css" %}'>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     </head>
     <body>
-        
+        <div id='content0'>
+            <div id='go_back'>
+                <a href='{%url "teraz:przed" %}' id='back' class="btn btn-warning bw">WSTECZ</a>
+            </div>
+        <div id='info2'>
+            <p>JESTEŚ</p>
+            <p>POSIADASZ DOSTĘP DO INFORMACJI</p>
+            <p>STRONA ZOSTAŁA WYGENEROWANA TYLKO DLA CIEBIE</p>
+            <p>JESTEŚ AKTUALNIE JEDYNĄ OSOBĄ KTORA MOŻE TEGO DOŚWIADCZYĆ</p>
+            <p>OTWÓRZ *PRZED</p>
+        </div>
+        </div>
     </body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
