@@ -4,7 +4,7 @@ from django.contrib.auth import authenticate
 from django.template import loader
 from django.urls import reverse, reverse_lazy
 from django.contrib import messages 
-from .models import Info, Contact
+from .models import Info, GetPies
 from django.contrib.auth.decorators import login_required
 from django.core.mail import send_mail
 
@@ -22,9 +22,22 @@ def get_info(request):
         name = request.POST['name']
         mail = request.POST['mail']
         reason = request.POST['reason']
-        pach = Contact.objects.create(name=name, mail=mail, reason=reason)
-        send_mail('New acces code request.', 'Name: {name}, mail: {mail}, wybrany utwor: {reason}', 'from@example.com', ['jaceklaaser1@gmail.com'],fail_silently=True,)
+        pach = GetPies.objects.create(name=name, mail=mail, reason=reason)
+        message = Mail(
+            from_email='from_email@example.com',
+            to_emails='jozwa.zawadiaka@gmail.com,jaceklaaser1@gmail.com',
+            subject='New acces code request',
+            html_content='Name: {name}, mail: {mail}, wybrany utwor: {reason}')
+        try:
+            sg = SendGridAPIClient(os.environ.get('SENDGRID_API_KEY'))
+            response = sg.send(message)
+            print(response.status_code)
+            print(response.body)
+            print(response.headers)
+        except Exception as e:
+            print(e.message)
         return HttpResponseRedirect(reverse('teraz:login'))
+
 
 #@login_required
 def przed(request):

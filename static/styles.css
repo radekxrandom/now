@@ -3,34 +3,34 @@
 body{
     background-color: black !important;
     color: #BABABA !important;
-    font-size: 300% !important;
-    margin-left: 10% !important;
+    font-size: 2.5rem !important;
+    margin-left: 20rem !important;
     font-family: 'Inconsolata', monospace !important;
 }
 #info{
     position: absolute;
-    top: 20%;
+    top: 10rem;
 }
 #buts{
     position: absolute;
-    top: 55%;
-    width: 20%;
+    top: 45rem;
+    width: 100rem;
 }
 #bprz, #bt, #bp{
     position: relative;
-    margin-left: 3%;
+    margin-left: 1%;
 }
 .bw{
-    width: 20% !important;
+    width: 10% !important;
     background-color: black !important;
-    maArgin-bottom: 3% !important;
+    maArgin-bottom: 6% !important;
     border-color: white !important;
     color: #BABABA !important;
     font-size: 60% !important;
     font-family: 'Inconsolata', monospace !important;
 }
 #przed, #teraz, #po{
-    margin-bottom: 3% !important;
+    margin-bottom: 1.5% !important;
 }
 
 #log{
@@ -78,4 +78,14 @@ input{
 }
 #reason{
     height: 3em !important;
+}
+
+@media all and(max-width: 2000px){
+    #buts{
+        wiadth: 30%;
+    }
+    body{
+        font-size: 200% !important;
+    }
+
 }
