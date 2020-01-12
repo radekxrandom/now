@@ -25,7 +25,9 @@ SECRET_KEY = 'not on github, there are people watching'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'czas.pythonanywhere.com',
+]
 
 
 # Application definition
