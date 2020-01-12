@@ -38,7 +38,7 @@ $(document).ready(function() {
             e.preventDefault();
         });
         $('#bpo').on( "click", function(e) {
-            localStorage.butBlock = 3;
+            localStorage.butBlock = 0;
         });
     }
     else if (localStorage.butBlock == '3'){

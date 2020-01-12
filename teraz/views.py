@@ -3,13 +3,13 @@ from django.http import HttpResponse, HttpResponseRedirect, HttpResponseNotFound
 from django.contrib.auth import authenticate
 from django.template import loader
 from django.urls import reverse, reverse_lazy
-from django.contrib import messages 
+from django.contrib import messages
 from .models import Info, GetPies
 from django.contrib.auth.decorators import login_required
 from django.core.mail import send_mail
 
 # Create your views here.
-#@login_required
+@login_required(login_url='/login')
 def main_page(request):
     template_name = 'main.html'
     return render(request, template_name)
@@ -39,17 +39,17 @@ def get_info(request):
         return HttpResponseRedirect(reverse('teraz:login'))
 
 
-#@login_required
+@login_required(login_url='/login')
 def przed(request):
     template_name = 'przed.html'
     return render(request, template_name)
 
-#@login_required
+@login_required(login_url='/login')
 def teraz(request):
     template_name = 'teraz.html'
     return render(request, template_name)
 
-#@login_required
+@login_required(login_url='/login')
 def po(request):
     template_name = 'po.html'
     return render(request, template_name)
@@ -57,15 +57,14 @@ def po(request):
 def login(request):
     template_name = 'login.html'
     if request.method == 'POST':
-        password = request.POST['password']
-        username = 'user'
+        username = request.POST['password']
+        password = 'useruser'
         user = authenticate(request, username=username, password=password)
         if user is not None:
             from django.contrib.auth import login
             login(request, user)
-            return HttpResponseRedirect(reverse('teraz:main'))
+            return HttpResponseRedirect(reverse('teraz:main_page'))
         else:
             return HttpResponseRedirect(reverse('teraz:login'))
     else:
         return render(request, template_name)
-
