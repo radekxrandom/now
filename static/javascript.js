@@ -42,6 +42,7 @@ $(document).ready(function() {
         });
     }
     else if (localStorage.butBlock == '3'){
+      localStorage.butBlock = 0;
         $('#bteraz').css('filter', 'none');
         $('#bteraz').on( "click", function(e) {
             e.preventDefault();
