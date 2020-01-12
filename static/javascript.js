@@ -37,7 +37,7 @@ $(document).ready(function() {
         $('#bteraz').on( "click", function(e) {
             e.preventDefault();
         });
-        $('#bprzed').on( "click", function(e) {
+        $('#bpo').on( "click", function(e) {
             localStorage.butBlock = 3;
         });
     }
