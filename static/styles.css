@@ -101,8 +101,9 @@ input{
   width: 80rem;
   margin-bottom: 20rem !important;
 }
-.lw, .bw:hover{
-  filter: blur(0.4px);
+.lw:hover, .bw:hover{
+  filater: blur(0.4px);
+  opacity: 0.8;
 }
 #cho{
   width: 800px;
