@@ -3,15 +3,16 @@
     <head>
         <title>Teraz</title>
         <link rel="stylesheet" href='{%static "styles.css" %}'>
+        <link rel="shortcut icon" href="{% static 'favwhite.ico' type='image/x-icon' %}">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     </head>
     <body>
-        
+
         <div id='log'>
             <form method='post'>
                 {% csrf_token %}
                 <input type='password' id='pd' placeholder="ACCES CODE" name='password' />
-            
+
                 <br>
                 <button type='submit' value='post' class="btn btn-warning lw">GET IN</button>
 

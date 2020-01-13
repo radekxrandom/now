@@ -7,6 +7,7 @@ from django.contrib import messages
 from .models import Info, GetPies
 from django.contrib.auth.decorators import login_required
 from django.core.mail import send_mail
+from django.contrib.auth.models import User
 
 # Create your views here.
 @login_required(login_url='/login')
@@ -62,7 +63,11 @@ def login(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             from django.contrib.auth import login
+            request.session.set_expiry(259200)
             login(request, user)
+            u = User.objects.get(username = username)
+            u.username = 'ugh'
+            u.save
             return HttpResponseRedirect(reverse('teraz:main_page'))
         else:
             return HttpResponseRedirect(reverse('teraz:login'))
