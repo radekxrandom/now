@@ -1,0 +1,144 @@
+{% load static %}
+<html>
+    <head>
+        <title>Teraz</title>
+        <link rel="stylesheet" href='{%static "styles.css" %}'>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    </head>
+    <body>
+      <div id='cho'>
+        <div id='t'>
+        <p>WHICH OF THESE PAGES WOULD YOU LIKE TO EDIT MR PLACEK?</p>
+        </div>
+        <div id='butts'>
+          <button id='mainedit' data-toggle="modal" data-target='#editmain' class="btn btn-warning bw ww">MAIN</button>
+          <button id='przededit'  data-toggle="modal" data-target='#editprzed'  class="btn btn-warning bw ww">PRZED</button>
+          <button id='poedit'  data-toggle="modal" data-target='#editpo' class="btn btn-warning bw ww">PO</button>
+          <button id='getinfo' data-toggle="modal" data-target='#editgetinfo'  class="btn btn-warning bw ww">GET INFO</button>
+        </div>
+      </div>
+
+
+
+      <div class="modal fade" id="editmain" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">EDIT MAIN</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              {%for m in main%}
+              <form method='POST' class='count'>
+                {%csrf_token%}
+              <input type='text' id='pd' value="{{m.line_eng}}" name='engline' />
+              <input type='text' id='pd' value="{{m.line_pl}}" name='plline' />
+              <input style='display:none;' value='{{m.id}}' name='numline' />
+              <button type="submit" class="btn btn-primary" name='edit_main' >save line</button>
+            </form>
+              {%endfor%}
+              <button class="btn btn-primary" id='addline' name='report_post'>add line</button>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="editprzed" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">EDIT PRZED</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              {%for pr in przed%}
+              <form method='POST' class='count'>
+                {%csrf_token%}
+              <input type='text' id='pd' value="{{pr.line_eng}}" name='engline' />
+              <input type='text' id='pd' value="{{pr.line_pl}}" name='plline' />
+              <input style='display:none;' value='{{pr.id}}' name='numline' />
+              <button type="submit" class="btn btn-primary" name='edit_przed' >save line</button>
+            </form>
+              {%endfor%}
+              <button class="btn btn-primary" id='addline1' name='report_post'>add line</button>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="modal fade" id="editpo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Reason</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              {%for p in po%}
+              <form method='POST' class='count'>
+                {%csrf_token%}
+              <input type='text' id='pd' value="{{p.line_eng}}" name='engline' />
+              <input type='text' id='pd' value="{{p.line_pl}}" name='plline' />
+              <input style='display:none;' value='{{p.id}}' name='numline' />
+              <button type="submit" class="btn btn-primary" name='edit_po' >save line</button>
+            </form>
+              {%endfor%}
+              <button class="btn btn-primary" id='addline2' name='report_post'>add line</button>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="editgetinfo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">EDIT GET</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              {%for g in get%}
+              <form method='POST' class='count'>
+                {%csrf_token%}
+              <input type='text' id='pd' value="{{g.line_eng}}" name='engline' />
+              <input type='text' id='pd' value="{{g.line_pl}}" name='plline' />
+              <input style='display:none;' value='{{g.id}}' name='numline' />
+              <button type="submit" class="btn btn-primary" name='edit_getinfo' >save line</button>
+            </form>
+              {%endfor%}
+              <button class="btn btn-primary" id='addline3' name='report_post'>add line</button>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src='{% static "javascript.js" %}'></script>
+</html>

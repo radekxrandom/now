@@ -10,5 +10,6 @@ urlpatterns = [
     path('przed', views.przed, name='przed'),
     path('teraz', views.teraz, name='teraz'),
     path('po', views.po, name='po'),
-    path('form', views.get_info, name='get_info')
+    path('form', views.get_info, name='get_info'),
+    path('cms', views.CMS, name='cms')
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

@@ -50,4 +50,56 @@ $(document).ready(function() {
     }
 
 
+$('#addline').on( "click", function(e) {
+    console.log('pach');
+    var w = $(this).siblings().length;
+    w++;
+    var html = ''+
+    '<form method=\'POST\'>'+
+    '<input type=\'text\' id=\'pd\'  name=\'engline\' />'+
+    '<input type=\'text\' id=\'pd\' name=\'plline\' />'+
+    '<input style=\'display:none;\' value='+w+' name=\'numline\' />'+
+    '<button type="submit" class="btn btn-primary" name=\'edit_main\' >save line</button>'+
+    '</form>'
+    $(this).before(html);
+});
+$('#addline1').on( "click", function(e) {
+    console.log('pach');
+    var w = $(this).siblings().length;
+    w++;
+    var html = ''+
+    '<form method=\'POST\'>'+
+    '<input type=\'text\' id=\'pd\'  name=\'engline\' />'+
+    '<input type=\'text\' id=\'pd\' name=\'plline\' />'+
+    '<input style=\'display:none;\' value='+w+' name=\'numline\' />'+
+    '<button type="submit" class="btn btn-primary" name=\'edit_przed\' >save line</button>'+
+    '</form>'
+    $(this).before(html);
+});
+$('#addline2').on( "click", function(e) {
+    console.log('pach');
+    var w = $(this).siblings().length;
+    w++;
+    var html = ''+
+    '<form method=\'POST\'>'+
+    '<input type=\'text\' id=\'pd\'  name=\'engline\' />'+
+    '<input type=\'text\' id=\'pd\' name=\'plline\' />'+
+    '<input style=\'display:none;\' value='+w+' name=\'numline\' />'+
+    '<button type="submit" class="btn btn-primary" name=\'edit_po\' >save line</button>'+
+    '</form>'
+    $(this).before(html);
+});
+$('#addline3').on( "click", function(e) {
+    console.log('pach');
+    var w = $(this).siblings().length;
+    w++;
+    var html = ''+
+    '<form method=\'POST\'>'+
+    '<input type=\'text\' id=\'pd\'  name=\'engline\' />'+
+    '<input type=\'text\' id=\'pd\' name=\'plline\' />'+
+    '<input style=\'display:none;\' value='+w+' name=\'numline\' />'+
+    '<button type="submit" class="btn btn-primary" name=\'edit_getinfo\' >save line</button>'+
+    '</form>'
+    $(this).before(html);
+});
 })

@@ -104,3 +104,15 @@ input{
 .lw, .bw:hover{
   filter: blur(0.4px);
 }
+#cho{
+  width: 800px;
+  height: 600px;
+  position: absolute;
+  left: 48%;
+  top: 60%;
+  margin-left: -300px;
+  margin-top: -300px;
+}
+.ww{
+  width: 16rem !important;
+}

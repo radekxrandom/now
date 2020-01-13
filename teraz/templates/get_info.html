@@ -9,11 +9,9 @@
     <body>
         <div id='content'>
             <div id='info1'>
-                <p>JESTEŚ</p>
-                <p>POSIADASZ DOSTĘP DO INFORMACJI</p>
-                <p>STRONA ZOSTAŁA WYGENEROWANA TYLKO DLA CIEBIE</p>
-                <p>JESTEŚ AKTUALNIE JEDYNĄ OSOBĄ KTORA MOŻE TEGO DOŚWIADCZYĆ</p>
-                <p>OTWÓRZ *PRZED</p>
+              {%for c in cms%}
+                <p>{{c.line_pl}}</p>
+                {%endfor%}
             </div>
             <div id='formularz'>
                         <p>POPROS O KOD DOSTEPU</p>
