@@ -1,7 +1,7 @@
 $(document).ready(function() {
     if(!localStorage.butBlock){
         localStorage.butBlock = 0;
-    }
+    }/*
     if (localStorage.butBlock == '0'){
         $('#bteraz').css('filter', 'none');
         $('#bpo').css('filter', 'none');
@@ -47,7 +47,7 @@ $(document).ready(function() {
         $('#bteraz').on( "click", function(e) {
             e.preventDefault();
         });
-    }
+    } */
 
 
 $('#addline').on( "click", function(e) {
