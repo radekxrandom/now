@@ -1,4 +1,6 @@
 $(document).ready(function() {
+
+
     if(!localStorage.butBlock){
         localStorage.butBlock = 0;
     }/*

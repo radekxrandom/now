@@ -108,6 +108,11 @@ def login(request):
         return render(request, template_name)
 
 @user_passes_test(lambda u: u.is_superuser)
+def block(request):
+    return redirect('main_page')
+
+
+@user_passes_test(lambda u: u.is_superuser)
 def CMS(request):
     template_name = 'cms.html'
     if request.method == 'GET':

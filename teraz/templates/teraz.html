@@ -9,13 +9,19 @@
     <body>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <div id='content0'>
+      <div id='content3'>
           <div id='go_back'>
               <a href='{%url "teraz:main_page" %}' id='back' class="btn btn-warning bw">WSTECZ</a>
           </div>
+          <audio type="audio/wav" id="audio" autoplay="false" autostart="false"></audio>
+
+            <div id='pies'><p>TERAZ - TRWAŁOŚĆ</p></div>
+
+
       </div>
     </body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src='{% static "javascript.js" %}'></script>
+    <script src='{% static "aog.js" %}'></script>
 </html>
