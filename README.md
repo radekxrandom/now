@@ -19,8 +19,6 @@ There is also a more detailed editing option on a dedicated page at /cms.
 To receive acces code there is a special form on /form.
 ![sc](https://i.imgur.com/pRadSUe.png)
 
-After I finish the website it is going to automatically send an e-mail with form data to my friend's inbox. 
-
 Przed and po are going to look similiar.
 ![sc](https://i.imgur.com/dRK5tft.png)
 
@@ -28,7 +26,6 @@ Teraz will play my friend's track. It will play it only once and block acces aft
 Acces code is going to be valid for only one listen and expire 3 days after being used.
 
 Things to be added:
- - Sending e-mails
  - Adding the track and making it hard to download
  - Add the ability to add new lines and delete existing ones in quick edit and post (put?) them through ajax.
  - Overhaul user authentication system
