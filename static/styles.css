@@ -3,7 +3,7 @@
 body{
     background-color: black !important;
     color: #BABABA !important;
-    font-size: 2.5rem !important;
+    font-size: 2rem !important;
     margin-left: 20rem !important;
     font-family: 'Inconsolata', monospace !important;
 }
@@ -99,7 +99,7 @@ input{
 #go_back{
   position: relative;
   width: 80rem;
-  margin-bottom: 20rem !important;
+  margin-bottom: 8rem !important;
 }
 .lw:hover, .bw:hover{
   filater: blur(0.4px);
