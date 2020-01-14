@@ -102,4 +102,25 @@ $('#addline3').on( "click", function(e) {
     '</form>'
     $(this).before(html);
 });
+
+$('#edit').on( "click", function(e) {
+$('#cl_edit').css('display','block');
+  $('.pap').each(function(e) {
+      console.log(e);
+    var val = $(this).html();
+    var ide = $(this).attr('id');
+  //  var ide = ide.slice(3);
+    var ht = ''+
+    '<form method=\'POST\'>'+
+    '<input type=\'text\' id=\'pd\' value="'+val+'" class=\'ugh\' name=\'plline\' />'+
+    '<input style=\'display:none;\' value='+ide+' name=\'numline\' />'+
+    '<button type="submit" class="btn btn-warning bw" name=\'edit_m\' >save line</button>'+
+    '</form>'
+    $(this).replaceWith(ht);
+});
+
+
+  });
+
+
 })

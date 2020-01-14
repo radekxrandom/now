@@ -13,7 +13,7 @@ body{
 }
 #buts{
     position: absolute;
-    top: 45rem;
+    top: 40rem;
     width: 100rem;
 }
 #bprz, #bt, #bp{
@@ -80,15 +80,20 @@ input{
     height: 3em !important;
 }
 
-@media all and(max-width: 2000px){
+@media all and (min-width: 1920px){
     #buts{
         wiadth: 30%;
     }
     body{
-        font-size: 200% !important;
-        color: red !important;
+        fonat-size: 3rem !important;
     }
-
+    #content0{
+      font-size:2.5rem !important;
+    }
+    #buts{
+      position: absolute;
+      top: 45rem !important;
+    }
 }
 #content0{
   position: absolute;
@@ -118,4 +123,13 @@ input{
 }
 .ww{
   width: 16rem !important;
+}
+.ugh{
+  width: 80rem;
+  background-color: black;
+  color: white;
+  border: none;
+}
+#cl_edit{
+  display:none;
 }

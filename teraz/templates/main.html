@@ -7,10 +7,16 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     </head>
     <body>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
         <div id='content'>
+          {% if request.user.is_superuser %}
+          <button id='edit' class="btn btn-warning bw">EDIT</button>
+          <button id='cledit' class="btn btn-warning bw">STOP EDITING</button>
+          {% endif %}
             <div id='info'>
               {%for c in cms%}
-                <p>{{c.line_pl}}</p>
+                <p class='pap' id='{{c.id}}'>{{c.line_pl}}</p>
                 {%endfor%}
             </div>
             <div id='buts'>

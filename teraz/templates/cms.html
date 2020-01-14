@@ -7,6 +7,8 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     </head>
     <body>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
       <div id='cho'>
         <div id='t'>
         <p>WHICH OF THESE PAGES WOULD YOU LIKE TO EDIT MR PLACEK?</p>
@@ -37,6 +39,7 @@
               <input type='text' id='pd' value="{{m.line_eng}}" name='engline' />
               <input type='text' id='pd' value="{{m.line_pl}}" name='plline' />
               <input style='display:none;' value='{{m.id}}' name='numline' />
+              <button type="submit" class="btn btn-primary" name='edit_main' >save line</button>
               <button type="submit" class="btn btn-primary" name='edit_main' >save line</button>
             </form>
               {%endfor%}

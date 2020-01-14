@@ -16,7 +16,15 @@ def main_page(request):
     template_name = 'main.html'
     cms = MainCMS.objects.all()
     context = {'cms': cms}
-    return render(request, template_name, context)
+    if request.method == 'GET':
+        return render(request, template_name, context)
+    if request.method == 'POST':
+        line_num = request.POST.get('numline')
+        line_pl = request.POST.get('plline')
+        main = MainCMS.objects.get(pk=line_num)
+        main.line_pl = line_pl
+        main.save()
+        return render(request, template_name, context)
 
 def get_info(request):
     template_name = 'get_info.html'
@@ -50,7 +58,15 @@ def przed(request):
     template_name = 'przed.html'
     cms = PrzedCMS.objects.all()
     context = {'cms': cms}
-    return render(request, template_name, context)
+    if request.method == 'GET':
+        return render(request, template_name, context)
+    if request.method == 'POST':
+        line_num = request.POST.get('numline')
+        line_pl = request.POST.get('plline')
+        przed = PrzedCMS.objects.get(pk=line_num)
+        przed.line_pl = line_pl
+        przed.save()
+        return render(request, template_name, context)
 
 @login_required(login_url='/login')
 def teraz(request):
@@ -62,7 +78,15 @@ def po(request):
     template_name = 'po.html'
     cms = PoCMS.objects.all()
     context = {'cms': cms}
-    return render(request, template_name, context)
+    if request.method == 'GET':
+        return render(request, template_name, context)
+    if request.method == 'POST':
+        line_num = request.POST.get('numline')
+        line_pl = request.POST.get('plline')
+        po = PoCMS.objects.get(pk=line_num)
+        po.line_pl = line_pl
+        po.save()
+        return render(request, template_name, context)
 
 def login(request):
     template_name = 'login.html'
