@@ -3,7 +3,7 @@
 body{
     background-color: black !important;
     color: #BABABA !important;
-    font-size: 2rem !important;
+    font-size: 2.5rem !important;
     margin-left: 20rem !important;
     font-family: 'Inconsolata', monospace !important;
 }
@@ -86,12 +86,14 @@ input{
     }
     body{
         font-size: 200% !important;
+        color: red !important;
     }
 
 }
 #content0{
   position: absolute;
   top: 3rem !important;
+  font-size: 1.5rem;
 }
 #info2{
   position: relative;
