@@ -8,6 +8,7 @@ from .models import Info, GetPies, MainCMS, PrzedCMS, PoCMS, GetInfoCMS
 from django.contrib.auth.decorators import login_required, user_passes_test
 from django.core.mail import send_mail
 from django.contrib.auth.models import User
+from django.conf import settings
 
 
 # Create your views here.
@@ -36,20 +37,14 @@ def get_info(request):
         name = request.POST['name']
         mail = request.POST['mail']
         reason = request.POST['reason']
-        pach = GetPies.objects.create(name=name, mail=mail, reason=reason)
-        message = Mail(
-            from_email='from_email@example.com',
-            to_emails='jozwa.zawadiaka@gmail.com,jaceklaaser1@gmail.com',
-            subject='New acces code request',
-            html_content='Name: {name}, mail: {mail}, wybrany utwor: {reason}')
-        try:
-            sg = SendGridAPIClient(os.environ.get('SENDGRID_API_KEY'))
-            response = sg.send(message)
-            print(response.status_code)
-            print(response.body)
-            print(response.headers)
-        except Exception as e:
-            print(e.message)
+        pach = GetPies.objects.create(u_name=name, u_mail=mail, u_reason=reason)
+        send_mail(
+            'Acces code request',
+            'Name: %s. Mail: %s. Form data: %s. xpkej xpkej randomrowno to jest klej.' %(name, mail, reason),
+            settings.EMAIL_HOST_USER,
+            ['jozwa.zawadiaka@gmail.com', 'jaceklaaser1@gmail.com'],
+            fail_silently=False,
+            )
         return HttpResponseRedirect(reverse('teraz:login'))
 
 
