@@ -27,6 +27,6 @@ Acces code is going to be valid for only one listen and expire 3 days after bein
 
 Things to be added:
  - Adding the track and making it hard to download
- - Add the ability to add new lines and delete existing ones in quick edit and post (put?) them through ajax.
+ - Add the ability to add new lines and delete existing ones in quick edit and post (patch?) them through ajax.
  - Overhaul user authentication system
  - Make site look better on mobile devices
