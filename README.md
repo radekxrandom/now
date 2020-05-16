@@ -13,7 +13,7 @@ There is a neat CMS written by me in place. There is quick edit option on every 
 ![sc](https://i.imgur.com/u6h3IOR.png)
 
 To receive acces code there is a special form on /form.
-![sc](https://i.imgur.com/pRadSUe.png)
+![sc](https://i.imgur.com/8Yk8Bqg.png)
 
 Przed and po are going to look similiar.
 ![sc](https://i.imgur.com/dRK5tft.png)
@@ -21,8 +21,6 @@ Przed and po are going to look similiar.
 Teraz will play my friend's track. It will play it only once and block acces afterwards. I am going to try to deter users from downloading the track.
 Acces code is going to be valid for only one listen and expire 3 days after being used.
 
-Things to be added:
- - Adding the track and making it hard to download
- - Add the ability to add new lines and delete existing ones in quick edit and post (patch?) them through ajax.
- - Overhaul user authentication system
- - Make site look better on mobile devices
+I tried to make design responsive
+![sc](https://i.imgur.com/kS2mTeI.png)
+![sc](https://i.imgur.com/F0fDaWk.png)
