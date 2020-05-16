@@ -7,14 +7,10 @@ Login page
 ![sc](https://i.imgur.com/Z8udVrO.png)
 
 Main page. Text written by my friend. Edit and stop editing buttons are visible only to superusers.
-![sc](https://i.imgur.com/T6hlp3d.png)
+![sc](https://i.imgur.com/o4UDlyj.png)
 
-There is a simple CMS written by me in place. There is quick edit option on every page (after you click edit button on the top).
-![sc](https://i.imgur.com/jhflHeR.png)
-
-There is also a more detailed editing option on a dedicated page at /cms.
-![sc](https://i.imgur.com/QeLiIni.png)
-![sc](https://i.imgur.com/tX23qr5.png)
+There is a neat CMS written by me in place. There is quick edit option on every page (after you click edit button on the top).
+![sc](https://i.imgur.com/u6h3IOR.png)
 
 To receive acces code there is a special form on /form.
 ![sc](https://i.imgur.com/pRadSUe.png)
